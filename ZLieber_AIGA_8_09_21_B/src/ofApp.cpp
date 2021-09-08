@@ -23,7 +23,7 @@ void ofApp::draw(){
         
         ofDrawCircle(500 + 100 * sin(i * 0.02 + time),
                      50 + i,
-                     50);
+                     50 + 40 * sin(i * 0.005 + time));
 
     }
     
