@@ -25,15 +25,16 @@ void ofApp::draw(){
     
     for(int i = 0; i < 900; i++){
         
-
+        float yScale = ofMap(sin(i * gSin), -1, 1, 0, ofGetHeight());
+        
         ofSetColor(127 + 127 * sin(i * rSin),
                    127 + 127 * sin(i * gSin),
                    127 + 127 * sin(i * bSin));
         
 
-        ofDrawCircle(500 + 100 * sin(i * 0.02 + time),
-                     50 + i,
-                     50 + 40 * sin(i * 0.005 + time));
+        ofDrawCircle(500 + 100 * sin(i * rSin),
+                     50 + yScale,
+                     50 + 40 * sin(i * bSin));
 
     }
     
