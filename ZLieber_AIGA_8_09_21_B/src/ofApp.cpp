@@ -19,22 +19,22 @@ void ofApp::draw(){
     
     float time = ofGetElapsedTimef();
     
-    float rSin = ofMap(sin(0.1 + time), -1, 1, 0.001, 0.01);
-    float gSin = ofMap(sin(0.11 + time), -1, 1, 0.0021, 0.0211);
-    float bSin = ofMap(sin(0.12 + time), -1, 1, 0.0031, 0.031);
+    float rSin = ofMap(sin(0.1 + time/2), -1, 1, 0.001, 0.0015);
+    float gSin = ofMap(sin(0.11 + time/2), -1, 1, 0.0021, 0.003);
+    float bSin = ofMap(sin(0.12 + time/2), -1, 1, 0.0031, 0.004);
     
-    for(int i = 0; i < 900; i++){
+    for(int i = 0; i < 9000; i++){
         
-        float yScale = ofMap(sin(i * gSin), -1, 1, 0, ofGetHeight());
+        float yScale = ofMap(sin(i * time * 0.0001), -1, 1, 0, ofGetHeight());
         
         ofSetColor(127 + 127 * sin(i * rSin),
                    127 + 127 * sin(i * gSin),
                    127 + 127 * sin(i * bSin));
         
 
-        ofDrawCircle(500 + 100 * sin(i * rSin),
+        ofDrawCircle(500 + 500 * sin(i * rSin/10),
                      50 + yScale,
-                     50 + 40 * sin(i * bSin));
+                     50 + 80 * sin(i * bSin/10));
 
     }
     
