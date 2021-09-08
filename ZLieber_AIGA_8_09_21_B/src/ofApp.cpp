@@ -19,9 +19,9 @@ void ofApp::draw(){
     
     float time = ofGetElapsedTimef();
     
-    float rSin = ofMap(sin(0.01 + time), -1, 1, 0.001, 0.01);
-    float gSin = ofMap(sin(0.011 + time), -1, 1, 0.0011, 0.011);
-    float bSin = ofMap(sin(0.012 + time), -1, 1, 0.0012, 0.012);
+    float rSin = ofMap(sin(0.1 + time), -1, 1, 0.001, 0.01);
+    float gSin = ofMap(sin(0.11 + time), -1, 1, 0.0021, 0.0211);
+    float bSin = ofMap(sin(0.12 + time), -1, 1, 0.0031, 0.031);
     
     for(int i = 0; i < 900; i++){
         
