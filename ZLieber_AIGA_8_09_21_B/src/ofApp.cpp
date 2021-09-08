@@ -17,9 +17,13 @@ void ofApp::draw(){
     
     ofBackground(0);
     
+    float time = ofGetElapsedTimef();
+    
     for(int i = 0; i < 900; i++){
         
-        ofDrawCircle(500, 50 + i, 50);
+        ofDrawCircle(500 + 100 * sin(i * 0.02 + time),
+                     50 + i,
+                     50);
 
     }
     
