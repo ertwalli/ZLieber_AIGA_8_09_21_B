@@ -21,6 +21,12 @@ void ofApp::draw(){
     
     for(int i = 0; i < 900; i++){
         
+
+        ofSetColor(127 + 127 * sin(i * 0.01 + time),
+                   127 + 127 * sin(i * 0.011 + time),
+                   127 + 127 * sin(i * 0.012 + time));
+        
+
         ofDrawCircle(500 + 100 * sin(i * 0.02 + time),
                      50 + i,
                      50 + 40 * sin(i * 0.005 + time));
