@@ -16,7 +16,13 @@ void ofApp::update(){
 void ofApp::draw(){
     
     ofBackground(0);
+    
+    for(int i = 0; i < 900; i++){
+        
+        ofDrawCircle(500, 50 + i, 50);
 
+    }
+    
 }
 
 //--------------------------------------------------------------
